@@ -1,26 +1,48 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const parent = React.createElement(
-  "div",
-  { id: "parent" },
-  [React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "I'm an h1 tag Dharmik"),
-    React.createElement("h2", {}, "I'm an h2 tag parcel is a best"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "I'm an h1 tag"),
-    React.createElement("h2", {}, "I'm an h2 tag"),
-  ])
-]
+// React Element
+// const heading = (
+//   <h1 className="head" tabIndex="5">
+//     Namaste Recat using JSX
+//   </h1>
+// );
+// console.log("heading", heading);
+
+// React Component
+// Class Based Component - OLD
+// Functional Component - NEW
+
+// React Functional Component
+// This both component HeadingComponent and HeadingComponent2 are same.
+// const HeadingComponent = () => {
+//   return <h1 className="heading">Namaste React using an function component</h1>
+// }
+
+// const HeadingComponent2 = () => <h1 className="heading">Namaste React using an function component</h1>;
+
+const elem = <span>React Element</span>;
+
+const number = 1000;
+
+// Component Compositions
+const HeadingComponent = () => {
+  return (
+    <div id="container">
+      <h1 className="heading">
+        Namaste React using an function component
+      </h1>
+    </div>    
+  );
+};
+
+
+const title = (
+  <h1 className="head" tabIndex="5">
+    {elem}
+    Namaste Recat using JSX
+  </h1>
 );
 
-const heading = React.createElement(
-  "h1",
-  { id: "heading", xyz: "abc" },
-  "Hello world from React!"
-);
-
-console.log("parent", parent);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+root.render(HeadingComponent());
