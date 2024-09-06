@@ -4,16 +4,16 @@ const User = ({name}) => {
     const [count2] = useState(1);
     useEffect(()=>{
         const timer = setInterval(() => {
-            console.log("NAMASTE RECAT OP");
+            // console.log("NAMASTE RECAT OP");
         }, 1000);
-        console.log("USEFEECT");
+        // console.log("USEFEECT");
 
         return () => {
             clearInterval(timer);
-            console.log("THIS IS SAME AS COMPOENENT DID UNMOUNT");
+            // console.log("THIS IS SAME AS COMPOENENT DID UNMOUNT");
         };
     }, []);
-    console.log("render");
+
     return (
         <div className="user-card">
             <h2>Count = {count}</h2>
