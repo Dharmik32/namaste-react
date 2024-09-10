@@ -69,3 +69,22 @@
 - Slice (carSlice)
 - dispatch(action)
 - Selector
+
+
+# Types of testing (developer)
+- Unit testing
+- Integration Testing
+- End to End Testing - e2e testing
+
+
+# Setting up testing in our app
+- Install React Testing library
+- Installed jest
+- Installed Babel dependencies
+- Configure Babel
+- Configure Parcel Config file to disable Babel transpilation
+- Jest configuration - npx jest --init
+- Install jsdom library
+- Install @babel/preset-react - to make JSX works in test cases
+- Include @babel/preset-react inside my babel configuration
+- npm i -D @testing-library/jest-dom
